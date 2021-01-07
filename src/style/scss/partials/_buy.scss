@@ -1,0 +1,135 @@
+.buy-section{
+  padding: 40px 0;
+  background-color: #FFFFFF;
+  @media screen and (min-width: 992px){
+    padding: 80px 0;
+  }
+  .container{
+    max-width: 1000px;
+  }
+  .section-header{
+    .heading{
+      font-weight: 900;
+      font-size: 24px;
+      padding-bottom: 40px;
+      color: #000000;
+      @media screen and (min-width: 768px){
+        font-size: 30px;
+      }
+      @media screen and (min-width: 992px){
+        font-size: 40px;
+      }
+      @media screen and (min-width: 1200px){
+        font-size: 50px;
+      }
+    }
+  }
+  .panel{
+    border: 2px solid #bec9e6;
+    border-radius: 20px;
+    .row{
+      height: 100%;
+    }
+    .prices{
+      background-color: $dark-blue;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      height: 100%;
+      color: #FFFFFF;
+      font-weight: 500;
+      font-size: 30px;
+      padding: 10px 0;
+      border-radius: 20px 20px 0 0;
+      @media screen and (min-width: 768px){
+        border-radius: 20px 0 0 20px;
+      }
+      .old{
+        text-decoration: line-through;
+      }
+      .parcels-number{
+        margin-top: -12px;
+      }
+      .new{
+        margin-top: -40px;
+        @media screen and (min-width: 431px){
+          margin-top: -60px;
+        }
+        @media screen and (min-width: 768px){
+          margin-top: -40px;
+        }
+      }
+      .prefix{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        position: relative;
+        top: -20px;
+        @media screen and (min-width: 431px){
+          top: -40px;
+        }
+        @media screen and (min-width: 768px){
+          top: -20px;
+        }
+        @media screen and (min-width: 991px){
+          top: -40px;
+        }
+      }
+      .price{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 80px;
+        letter-spacing: -6px;
+        @media screen and (min-width: 431px){
+          font-size: 120px;
+        }
+        @media screen and (min-width: 768px){
+          font-size: 80px;
+        }
+        @media screen and (min-width: 992px){
+          font-size: 120px;
+        }
+      }
+      .parcels-price{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        margin-top: -40px;
+      }
+    }
+    .list{
+      padding: 20px;
+      .heading{
+        font-weight: 700;
+        color: $dark-blue;
+        font-size: 24px;
+        padding-bottom: 14px;
+        @media screen and (min-width: 420px){
+          text-align: center;
+        }
+        @media screen and (min-width: 460px){
+          font-size: 30px;
+        }
+        @media screen and (min-width: 768px){
+          text-align: left;
+        }
+      }
+    }
+    .item{
+      color: #000000;
+      font-weight: 500;
+      display: flex;
+      .icon{
+        padding-right: 10px;
+      }
+    }
+    .btn{
+      @include btn_hover;
+      background-color: $blue;
+      color: #FFFFFF;
+      width: 220px;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: -40px;
+    }
+  }
+}
