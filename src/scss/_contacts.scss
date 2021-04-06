@@ -1,0 +1,15 @@
+.contacts{
+  background-color: $blue-three;
+  padding: 40px 0;
+  color: #FFFFFF;
+  .section-header{
+    .header{
+      font-weight: 700;
+      font-size: 22px;
+      padding-bottom: 30px;
+      @media screen and (min-width: 768px){
+        font-size: 26px;
+      }
+    }
+  }
+}

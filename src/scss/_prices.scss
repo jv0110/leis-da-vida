@@ -1,0 +1,131 @@
+.prices{
+  padding: 80px 0 30px 0;
+  @media screen and (max-width: 1299px){
+    display: none;
+  }
+  .table-responsive{
+    @media screen and (min-width: 1300px){
+      min-width: 1230px;
+      margin-left: -50px;
+      overflow-x: hidden;
+    }
+  }
+  .table{
+    .section-heading{
+      font-weight: 800;
+      font-size: 20px;
+      @media screen and (min-width: 768px){
+        font-size: 42px;
+      }
+      br{
+        @media screen and (max-width: 767px){
+          display: none;
+        }
+      }
+    }
+    .package{
+      text-align: center;
+    }
+    .standard{
+      .price-container{
+        background-color: #5F5F5F;
+      }
+      .heading{
+        background-color: $orange;
+        font-weight: 800;
+      }
+    }
+    .gold{
+      .price-container{
+        background-color: #323232;
+      }
+      .heading{
+        background-image: url('../assets/images/gold-texture.png');
+        background-position: right top;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+    .premium{
+      .price-container{
+        background-color: #161616;
+      }
+      .heading{
+        background-color: $blue-three;
+        padding:40px 0;
+      }
+    }
+    th{
+     padding: 0;
+     color: #FFFFFF;
+     text-transform: uppercase;
+     min-width: 270px;
+     border-top: none;
+     background-color: #FFFFFF;
+     &.first{
+        min-width: 380px;
+     }
+     .price-container{
+       margin-top: -10px;
+       padding: 10px 0;
+       font-family: 'Montserrat', sans-serif;
+       .text{
+        font-size: 14px;
+       }
+       .full-price{
+         font-weight: 500;
+         font-size: 20px;
+       }
+       .parcels-quant{
+          font-weight: 800;
+          font-size: 28px;
+        }
+     }
+     .heading{
+       font-weight: 800;
+       font-size: 22px;
+       padding: 22px 0;
+     }
+     .text{
+        font-weight: 400;
+     }
+    }
+    td{
+      font-weight: 500;
+      border-right: 1px solid rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    .no-border{
+      td{
+        border: none;
+      }
+    }
+    .btn{
+      color: #FFFFFF;
+      font-weight: 700;
+      width: 220px;
+      margin: 0 auto;
+      padding: 10px 0;
+      border-radius: 12px;
+      &.in-cash{
+        background-color: #50BCBD;
+      }
+      &.parceled-out{
+        background-color: #3E9192;
+      }
+    }
+  }
+  .info{
+    color: #000000;
+    padding-top: 30px;
+    @media screen and (min-width: 576px){
+      font-size: 22px;
+    }
+    @media screen and (min-width: 768px){
+      font-size: 24px;
+    }
+    .underline{
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: 0.2s ease-in-out;
+}
+html, body{
+  overflow-x: hidden;
+}
+body{
+  font-size: 100%;
+  position: relative;
+}
+ul{
+  list-style-type: none;
+}
+button{
+  border: none;
+  background-color: transparent;
+}
+.orange{
+  color: $orange;
+}
+.blue{
+  color: $blue-two;
+}

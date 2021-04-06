@@ -1,0 +1,36 @@
+.cta{
+  position: relative;
+  height: 280px;
+  color: #FFFFFF;
+  video{
+    @include absolute_pos();
+    object-fit: cover;
+  }
+  .content{
+    @include absolute_pos();
+    @include align_center();
+    flex-direction: column;
+    background-color: rgba(15, 25, 206, 0.75);
+    padding: 16px;
+    br{
+      @media screen and (max-width: 415px){
+        display: none;
+      }
+    }
+    .heading{
+      font-weight: 700;
+      @media screen and (min-width: 640px){
+        font-size: 36px;
+      }
+      @media screen and (min-width: 992px){
+        font-size: 42px;
+      }
+    }
+    .text{
+      line-height: 20px;
+      @media screen and (min-width: 640px){
+        font-size: 18px;
+      }
+    }
+  }
+}

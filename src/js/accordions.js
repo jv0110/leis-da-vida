@@ -1,28 +1,56 @@
+const close_opened_accordions = (accordion) => {
+  const content = document.querySelectorAll('.item-content');
+  content.forEach((content, index) => {
+    if(index !== accordion){
+      content.classList.add('hide');
+    }
+  });
+}
+const plus_icon = (icons) => {
+  [...icons].forEach(icon => {
+    icon.src="./assets/images/plus.png";
+  });
+}
+const minus_icon = (icons) => {
+  [...icons].forEach(icon => {
+    icon.src="./assets/images/minus.png";
+  });
+}
+const change_first_button_bg = () => {
+  const open_btn = document.querySelectorAll('.item .item-header')[0];
+  open_btn.style.backgroundColor = "#2630E0";
+}
+const change_buttons_style = () => {
+  const content = document.querySelectorAll('.item-content');
+  content.forEach((cont, index) => {
+    if(cont.classList.contains('hide')){
+      cont.previousElementSibling.style.backgroundColor = "#121444";
+      const icons = cont.previousElementSibling.getElementsByTagName('img')
+      plus_icon(icons);
+    }else{
+      cont.previousElementSibling.style.backgroundColor = "#2630E0";
+      const icons = cont.previousElementSibling.getElementsByTagName('img')
+      minus_icon(icons);
+    }
+  });
+}
+
 const open_accordion = () => {
   const open_btn = document.querySelectorAll('.item .item-header');
   open_btn.forEach((btn, index) => {
-    if(index > 0) btn.classList.add('closed');
-    btn.addEventListener('click', e => {
-      const icon = document.querySelectorAll('.faq .item .icon img')[index];
-      if(btn.classList.contains('closed')){
-        open_btn.forEach((btnOpen, indexOpen) => {
-          if(!btnOpen.classList.contains('closed')){
-            const contentOpen = document.querySelectorAll('.item .item-content')[indexOpen];
-            const iconOpen = document.querySelectorAll('.faq .item .icon img')[indexOpen];
-            btnOpen.classList.add('closed');
-            contentOpen.classList.add('hide');
-            iconOpen.src = './assets/images/plus.png';
-          }
-        });
-        btn.classList.remove('closed');
-        icon.src = './assets/images/minus.png';
+    btn.addEventListener('click', () => {
+      const content = document.querySelectorAll('.item-content')[index];
+      if(content.classList.contains('hide')){
+        content.classList.remove('hide');
+        btn.style.backgroundColor = "#2630E0";
       }else{
-        icon.src = './assets/images/plus.png';
-        btn.classList.add('closed');
+        content.classList.add('hide');
+        btn.style.backgroundColor = "#121444";
       }
-      const content = document.querySelectorAll('.item .item-content')[index];
-      content.classList.toggle('hide');
+      close_opened_accordions(index);
+      change_buttons_style();
     });
   });
 }
+change_first_button_bg();
 open_accordion();

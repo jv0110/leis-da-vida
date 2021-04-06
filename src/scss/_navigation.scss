@@ -1,0 +1,49 @@
+.navigation{
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: 10px 0;
+  text-align: center;
+  .toggler{
+    font-size: 48px;
+    cursor: pointer;
+    @media screen and (min-width: 768px){
+      display: none;
+    }
+  }
+  .nav{
+    display: flex;
+    flex-direction: column;
+    &.hide-nav{
+      display: none;
+      @media screen and (min-width: 768px){
+        display: flex;
+      }
+    }
+    @media screen and (min-width: 768px){
+      @include align_center();
+      flex-direction: row;
+    }
+    .nav-item{
+      padding: 10px;
+    }
+    a{
+      font-weight: 800;
+      color: #000000;
+      text-decoration: none;
+      &:hover{
+        color: $dark-blue;
+      }
+    }
+    .btn{
+       background-color: $orange;
+       color: #FFFFFF;
+       display: inline-block;
+       padding: 10px;
+    }
+    .logo{
+      @media screen and (max-width: 1199px){
+        display: none;
+      }
+    }
+  }
+}
